@@ -18,11 +18,13 @@ package edu.eci.cosw.samples.services;
 
 import edu.eci.cosw.jpa.sample.model.Paciente;
 import java.util.List;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author hcadavid
  */
+@Service
 public interface PatientServices {
     
     /**
@@ -42,5 +44,7 @@ public interface PatientServices {
      * @throws ServicesException si se presenta un error interno en la consulta.
      */
     public List<Paciente> topPatients(int n) throws ServicesException;
+ 
+    
     
 }
