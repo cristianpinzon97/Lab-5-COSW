@@ -20,7 +20,7 @@ import org.springframework.stereotype.Service;
 @Service
 public interface PatientsRepository extends JpaRepository<Paciente, PacienteId>{
     
-    @Query("SELECT p FROM Paciente AS p WHERE p.consultas.size>=:n")
-    public  List<Paciente> getPatientsAtLeastNConsults(@Param("n") int n);   
+    @Query("SELECT p FROM Paciente AS p WHERE p.consultas.size>=?1")
+    public  List<Paciente> getPatientsAtLeastNConsults(int n);   
     
 }
